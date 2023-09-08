@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+</head>
+<body>
+    <div>
+        <h1 id="waktu">Waktu</h1>
+        <button onclick="hallo()">
+            Klik
+        </button>
+        <button onclick="waktu()">
+            Waktu
+        </button>
+        
+        <br><br><br>
+        <input type="number" id="bulan" placeholder="Bulan">
+        <input type="number" id="tanggal" placeholder="Tanggal">
+        <h1 id="zodiak">Zodiak</h1>
+        <button onclick="Zodiak()">Zodiak</button>
+
+        <div>
+        <h1 id="hasil">Hasil perkalian</h1>
+        <input type="number" id="bil1" placeholder="bilangan 1">
+        <input type="number" id="bil2" placeholder="bilangan 2">
+        <button onclick="kali()">perkalian</button>
+        </div>
+
+    </div>
+    <script>
+        function hallo(){
+            alert("Halo Javascript");
+        }
+        function waktu(){
+            document.getElementById('waktu').innerHTML=Date();
+        }
+        function Zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let zodiak="invalid";
+            if(bulan==1){
+                if(tanggal>0 && tanggal<20){
+                   zodiak="Aries";
+                }
+                if(tanggal>19 && tanggal<32){
+                    zodiak="Pisces";
+                }
+            }
+            if(bulan==2){
+                if(tanggal>0 && tanggal<20){
+                    zodiak="banteng";
+                }
+            }
+            document.getElementById('zodiak').innerHTML=zodiak;
+        }
+        function kali(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=a*b;
+            document.getElementById('hasil').innerHTML=hasil;
+        }
+        function tambah(){
+            
+        }
+    </script>
+</body>
+</html>
